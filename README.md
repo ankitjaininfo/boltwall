@@ -173,7 +173,7 @@ generate an API key and save it as:
 OPEN_NODE_KEY=[API KEY HERE]
 ```
 
-If you have both the lnd configs and OpenNode, _lnd will take precedence_.
+If you have both the _lnd_ configs and OpenNode, _lnd will take precedence_.
 
 A `SESSION_SECRET` can also be set but will be generated with a secure number of random bytes if
 none is provided.
@@ -444,22 +444,28 @@ The properties that can be passed (none are required) to the boltwall config obj
   (see full documentation for more details on writing your own satisfiers) for evaluating
   caveats on a macaroon.
 - `getInvoiceDescription` - an optional function that returns a string to be used in the invoice description
-- `minAmount` - minimum amount to create invoices with if none is passed in request body
+- `minAmount` - minimum amount to create invoices with if none is passed in the request body
 - `hodl`- (optional, false by default) boolean, true to enable a hodl paywall.
 - `oauth`- (optional, false by default) boolean, true to enable 3rd party authentication.
 - `rate` - (optional, undefined by default) float, a rate to be used by other caveatGetters.
   For example, the TIME_CAVEAT_CONFIGS applies this as a satoshis/second value to calculate expiration.
 
-More indepth documentation for these properties can be found in the [docs](https://Tierion.github.io/boltwall/interfaces/_src_typings_configs_d_.boltwallconfig.html)
+More in-depth documentation for these properties can be found in the [docs](https://Tierion.github.io/boltwall/interfaces/_src_typings_configs_d_.boltwallconfig.html)
 
 ### REST API
 
-Check out the Swagger Docs for detailed API information. This details what to expect
+Check out the Swagger Docs for detailed API information. These are the details of what to expect
 at the various routes provided for by `Boltwall`.
 
 **[REST API](https://app.swaggerhub.com/apis-docs/boltwall/boltwall/2.0.0-beta-oas3)**
 
 ### Full API Documentation
 
-API documentation, with details on the code, API, and Typescript definitions
+API documentation, with details on the code, API, and TypeScript definitions
 can be found at the [documentation website](https://Tierion.github.io/boltwall/).
+
+### Mock APIs
+
+Try these APIs using Beeceptor’s OpenAPI mock server. It lets you explore request and response payloads and get near-real API responses, all without needing API keys, access setup or a sandbox server. It’s a quick and effective way to test and integrate APIs.
+
+<a href="https://beeceptor.com/openapi-mock-server/?utm_source=github&utm_campaign=Tierion-boltwall&url=https://raw.githubusercontent.com/Tierion/boltwall/refs/heads/master/openapi.yaml" target="_blank"><img src="https://cdn.beeceptor.com/assets/images/buttons/mock-openapi-with-beeceptor.png" alt="Mock These APIs Instantly" style="height: 60px;"></a>
